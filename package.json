@@ -1,0 +1,55 @@
+{
+  "name": "@killovsky/tree",
+  "version": "1.0.0",
+  "description": "Módulo que adquire as pastas e arquivos de um diretório, em JSON, similar ao comando 'tree' de diversos sistemas operacionais.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillovSky/Tree.git"
+  },
+  "keywords": [
+    "tree",
+    "os",
+    "linux",
+    "windows",
+    "json",
+    "object",
+    "folder",
+    "recursive",
+    "find",
+    "dir",
+    "directory",
+    "files",
+    "list",
+    "advanced",
+    "customization",
+    "easy"
+  ],
+  "author": "KillovSky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KillovSky/Tree/issues"
+  },
+  "homepage": "https://github.com/KillovSky/Tree#readme",
+  "funding": [
+    {
+      "type": "kofi",
+      "url": "http://ko-fi.com/killovsky"
+    },
+    {
+      "type": "other",
+      "url": "https://github.com/KillovSky/KillovSky#-fundings"
+    },
+    {
+      "type": "paypal",
+      "url": "https://bit.ly/33QDaGa"
+    },
+    {
+      "type": "picpay",
+      "url": "https://picpay.me/userlucas123"
+    }
+  ]
+}

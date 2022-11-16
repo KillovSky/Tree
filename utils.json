@@ -1,0 +1,190 @@
+{
+    "name": "View",
+    "description": "Sistema que obtém os arquivos e pastas em JSON, similar ao comando 'tree -J' do linux.",
+    "usage": {
+        "general": "Verifique o 'examples' para usos ou confira a documentação oficial.",
+        "examples": [
+            "View.env()",
+            "View.env().parameters.checkstats.value('LOCAL')",
+            "View.env().parameters.revert.value()",
+            "View.env().parameters.init.value('LOCAL')",
+            "View.env().parameters.pack.value()",
+            "View.init('LOCAL')",
+            "View.reset()",
+            "View.pack()"
+        ]
+    },
+    "license": "MIT",
+    "helps": [
+        "Você pode mudar os parâmetros da exports enviando o valor da Object que deseja editar ao resetar, por exemplo → View.reset({ name: 'Arvore'}) ← Isso mudaria o module de Tree para Arvore, o uso então passaria ser: → Arvore.funcão ← Isso também permite que você edita a função usando o mesmo método.",
+        "Você pode mudar o que os códigos rodam, em tempo real, basta usar a 'env', por exemplo → View.env().name = 'Arvore' ← Mas este método não atualizará o sistema, somente a Object, os sistemas permanecem intactos.",
+        "Alguns arquivos e pastas não podem ser lidos, como é o caso dos arquivos ocultos de sistema do Windows, então evite rodar o Tree em locais restritos, se ocorrer erros, a função será abortada e nada será salvo.",
+        "Você pode configurar o tempo de reset dos resultados ou se eles devem ser resetados usando a env, por exemplo → View.env().parameters.wait = 10000 ← Isso mudaria o tempo de espera para 10 segundos, o tempo deve ser em milissegundos.",
+        "Este sistema pode demorar, isso é, caso você utilize em locais com milhares de arquivos, na mode_modules do Projeto Íris pode levar de 1 a 3 minutos para uma analise de milhares de pastas e arquivos.",
+        "Alguém lê essas dicas? Se sim, torne-se um programador, ler os tutoriais é de suma importância e poucos desenvolvedores o fazem...",
+        "O peso dos arquivos pode parecer diferente do que é, isso é devido a existir o peso total e o peso em disco, talvez você já tenha visto isso nas propriedades de um arquivo, de toda forma, este módulo adquire o peso completo."
+    ],
+    "exports": {
+        "env": "env",
+        "init": "init",
+        "pack": "pack",
+        "reset": "reset"
+    },
+    "developer": "KillovSky",
+    "parameters": {
+        "ambient": {
+            "arguments": false,
+            "description": "Retorna as variáveis e sistemas do Tree.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "archives": {
+            "arguments": false,
+            "description": "Apenas os nomes de arquivos no diretório.",
+            "type": "Boolean / Array",
+            "value": false
+        },
+        "checkstats": {
+            "arguments": {
+                "localePlace": {
+                    "description": "Local em que o Tree deve ser executado.",
+                    "type": "String",
+                    "value": "./"
+                }
+            },
+            "description": "Função que faz a varredura dos locais e arquivos.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "code": {
+            "arguments": false,
+            "description": "Código do erro que obter.",
+            "type": "Boolean / String / Number",
+            "value": false
+        },
+        "error": {
+            "arguments": false,
+            "description": "Define se pode printar qualquer erro.",
+            "type": "Boolean",
+            "value": false
+        },
+        "finish": {
+            "arguments": false,
+            "description": "Define se deve resetar a cada finalização.",
+            "type": "Boolean",
+            "value": true
+        },
+        "folders": {
+            "arguments": false,
+            "description": "Apenas os nomes de pastas no diretório.",
+            "type": "Boolean / Array",
+            "value": false
+        },
+        "fs": {
+            "arguments": false,
+            "description": "Leitura de diretórios e arquivos.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "index.js": {
+            "arguments": false,
+            "description": "Sistema de Tree.",
+            "type": "Boolean / Module",
+            "value": false
+        },
+        "location": {
+            "arguments": false,
+            "description": "Local onde o módulo pode ser encontrado.",
+            "type": "Boolean / String",
+            "value": false
+        },
+        "message": {
+            "arguments": false,
+            "description": "Armazena a mensagem do último erro recebido.",
+            "type": "Boolean / String",
+            "value": false
+        },
+        "namings": {
+            "arguments": false,
+            "description": "Arquivos e pastas no diretório.",
+            "type": "Boolean / Array",
+            "value": false
+        },
+        "./package.json": {
+            "arguments": false,
+            "description": "Dados da package do módulo.",
+            "type": "Boolean / Object",
+            "value": false
+        },
+        "pack": {
+            "arguments": false,
+            "description": "Função que retorna a package.json do módulo.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "path": {
+            "arguments": false,
+            "description": "Corrige os locais adequadamente.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "reset": {
+            "arguments": false,
+            "description": "Determina se a envInfo deve resetar a cada erro.",
+            "type": "Boolean",
+            "value": true
+        },
+        "revert": {
+            "arguments": false,
+            "description": "Reseta a envInfo para a Object padrão.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "stock": {
+            "arguments": false,
+            "description": "Local padrão utilizado caso o enviado seja incorreto.",
+            "type": "Boolean / String",
+            "value": false
+        },
+        "success": {
+            "arguments": false,
+            "description": "Determina se obteve erros ou não",
+            "type": "Boolean",
+            "value": true
+        },
+        "test.js": {
+            "arguments": false,
+            "description": "Função de teste para o sistema de Tree.",
+            "type": "Boolean / Module",
+            "value": false
+        },
+        "tree": {
+            "arguments": {
+                "placeLocation": {
+                    "description": "Local em que o Tree deve ser executado.",
+                    "value": "./"
+                }
+            },
+            "description": "Inicia o Tree em determinado local.",
+            "type": "Boolean / Function",
+            "value": false
+        },
+        "utils.json": {
+            "arguments": false,
+            "description": "Dados de fábrica da envInfo.",
+            "type": "Boolean / Object",
+            "value": false
+        },
+        "wait": {
+            "arguments": false,
+            "description": "Tempo em MS que deve esperar antes de resetar.",
+            "type": "Number",
+            "value": 5000
+        }
+    },
+    "results": {
+        "description": "Resultado final.",
+        "type": "Boolean / Object",
+        "value": false
+    }
+}
